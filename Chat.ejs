@@ -1,0 +1,35 @@
+<section id="chat" data-ng-controller="CHAT">
+    <div class="chatinner animated" data-ng-class="showCh" data-ng-hide="shhiChat">
+        <div class="col-md-10 col-md-offset-1 col-sm-12">
+            <div class="row">
+                <h2>Chat</h2>
+                <p class="chatonline" data-ng-bind="nrOFOnline + ' är just nu online!'"> </p>
+                <p data-ng-if='nameSet'>Hej {{temporaryname}}, välkommen att fortsätta chatta!</p>
+                <ul  class="chatmsg" id="chatmsg">
+                </ul>
+                <form class="chat-form">
+                    <div class="form-group">
+                        <div class="col-md-9">
+                            <input id="chat-textmsg" data-ng-model="message" class="form-control"
+                                   placeholder="Skriv nått vetja..." type="text">
+
+                        </div>
+                        <div class="col-md-3">
+                            <button id="chat-sendbtn" ng-click="SendMessage()" class="btn btn-default">Skicka
+                            </button>
+                        </div>
+                        <div class="col-md-6" data-ng-show="NameShow" data-ng-init='errormsg=""'>
+                            <label>Namn:</label>
+                            <input id="chat-textmsg" data-ng-model="temporaryname" class="form-control"
+                                   placeholder="John Doe" type="text">
+                            <p class="nameerrormsg"> {{errormsg}}</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="showChat">
+        <button class="btn btn-default" data-ng-click="openChat()" data-ng-model="chatbtn">{{chatbtn}}</button>
+    </div>
+</section>
