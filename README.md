@@ -1,5 +1,5 @@
 # chat-module
-Simple chat-module.
+## Simple chat-module.
   Dependencies :
     * socket.io
     * angular.js
